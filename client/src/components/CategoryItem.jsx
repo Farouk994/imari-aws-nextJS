@@ -40,6 +40,13 @@ background-color:white;
 color:grey;
 cursor:pointer;
 font-weight:600;
+transition: all 0.5s ease;
+
+&:hover {
+   background-color:black;
+   color:white;
+   transform: scale(1.1);
+}
 `;
 
 const CategoryItem = ({ item }) => {
