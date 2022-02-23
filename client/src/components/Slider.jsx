@@ -74,6 +74,14 @@ const Button = styled.button`
    font-size: 20px;
    cursor: pointer;
    hoover: black;
+
+   transition: all 0.5s ease;
+
+   &:hover {
+      background-color: black;
+      color: white;
+      transform: scale(1.1);
+   }
 `;
 
 const Slider = () => {
