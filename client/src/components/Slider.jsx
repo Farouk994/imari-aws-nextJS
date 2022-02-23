@@ -68,8 +68,8 @@ const Description = styled.p`
    letter-spacing: 3px;
 `;
 const Button = styled.button`
-   background-color: transparent;
-   color: black;
+   background-color: black;
+   color: white;
    padding: 10px;
    font-size: 20px;
    cursor: pointer;
@@ -78,8 +78,8 @@ const Button = styled.button`
    transition: all 0.5s ease;
 
    &:hover {
-      background-color: black;
-      color: white;
+      background-color: transparent;
+      color: black;
       transform: scale(1.1);
    }
 `;

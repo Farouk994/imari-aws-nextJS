@@ -1,9 +1,17 @@
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
+import Product from "./pages/Product";
+import ProductList from "./pages/ProductList";
 
 const App = () => {
    return (
       <div>
-       <Home/>
+         <Navbar />
+         {/* <Home /> */}
+         {/* <ProductList /> */}
+         <Product />
+         {/* <Footer/> */}
       </div>
    );
 };

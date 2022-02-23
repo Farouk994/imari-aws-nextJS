@@ -16,7 +16,7 @@ export const sliderItems = [
    {
       id: 3,
       img: "https://i.pinimg.com/564x/8b/d7/66/8bd7661adb10e8549a73df39c6363a00.jpg",
-      title: "LOUNGEWEAR LOVE",
+      title: "LOUNGEWEAR",
       desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
       bg: "fbf0f4",
    },
@@ -30,8 +30,8 @@ export const categories = [
    },
    {
       id: 2,
-      img: "https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      title: "LOUNGEWEAR LOVE",
+      img: "https://i.pinimg.com/564x/ac/dc/0a/acdc0ae459ed1e201e55d558b310ebf2.jpg",
+      title: "LOUNGEWEAR",
    },
    {
       id: 3,
@@ -67,7 +67,7 @@ export const popularProducts = [
    },
    {
      id:7,
-     img:"https://www.vintageindustries.nl/download_front/qympzk1762/2217_Arrow_Jacket_Forest.png",
+     img:"../src/pages/images/bck-removebg-preview.jpg",
    },
    {
      id:8,
