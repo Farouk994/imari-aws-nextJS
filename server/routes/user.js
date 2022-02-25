@@ -1,9 +1,25 @@
 const express = require("express");
-const { registerUser, loginUser } = require("../controllers/auth");
+const {
+   updateUser,
+   deleteUser,
+   getUser,
+   getAllUsers,
+   getUserStats,
+} = require("../controllers/user");
+const {
+   verifyTokenAuthorization,
+   verifyTokenAdmin,
+} = require("../middleware/verifyToken");
 const router = express.Router();
 
-router.post("/user/register", registerUser);
+router.get("/user/find/:id", verifyTokenAdmin, getUser);
 
-router.post("/user/login", loginUser);
+router.get("/user/all", getAllUsers);
+
+router.put("/user/:id", updateUser, verifyTokenAuthorization);
+
+router.delete("/user/:id", deleteUser, verifyTokenAuthorization);
+
+router.get("/user/stats/", verifyTokenAdmin, getUserStats);
 
 module.exports = router;

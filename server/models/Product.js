@@ -27,12 +27,12 @@ const productSchema = new Schema(
       },
       image: {
          type: String,
-         require: true,
+         // require: true,
       },
    },
    { timestamps: true }
 );
 
-const Product = mongoose.model("User", productSchema);
+const Product = mongoose.model("Product", productSchema);
 
 module.exports = Product;

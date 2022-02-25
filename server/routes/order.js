@@ -24,6 +24,6 @@ router.get("/order/get/all", verifyTokenAdmin, getAllOrders);
 
 router.get("/order/user/:id", verifyTokenAuthorization, getUserOrders);
 
-router.get("/order/monthly/income", verifyTokenAdmin, getMonthlyOrders);
+router.get("/order/monthly/stats", verifyTokenAdmin, getMonthlyOrders);
 
 module.exports = router;

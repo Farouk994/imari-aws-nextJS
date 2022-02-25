@@ -25,12 +25,26 @@ const getProductById = async (req, res) => {
 
 // Get All Products
 const getAllProducts = async (req, res) => {
+   const qNew = req.query.new;
+   const qCategory = req.query.category;
    try {
-      const product = await Product.find();
-      res.status(200).json(product);
+      let products;
+
+      if (qNew) {
+         products = await Product.find().sort({ createdAt: -1 }).limit(1);
+      } else if (qCategory) {
+         products = await Product.find({
+            categories: {
+               $in: [qCategory],
+            },
+         });
+      } else {
+         products = await Product.find();
+      }
+
+      res.status(200).json(products);
    } catch (err) {
-      console.log(err.message);
-      res.status(500).send("Server Error");
+      res.status(500).json(err);
    }
 };
 

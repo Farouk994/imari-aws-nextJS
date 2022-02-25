@@ -1,5 +1,6 @@
 const User = require("../models/User");
 const Crypto = require("crypto-js");
+const jwt = require("jsonwebtoken");
 
 require("dotenv").config();
 
@@ -44,7 +45,16 @@ const loginUser = async (req, res) => {
 
       const { password, ...info } = user._doc;
 
-      res.status(200).json(info);
+      const accessToken = jwt.sign(
+         {
+            id: user._id,
+            isAdmin: user.isAdmin,
+         },
+         process.env.JWT_sECRET,
+         { expiresIn: "3d" }
+      );
+
+      res.status(200).json({ ...info, accessToken });
    } catch (err) {
       console.log(err);
       res.status(500).send("Server Error");
